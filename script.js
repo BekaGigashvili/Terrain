@@ -29,8 +29,7 @@ function delay(ms) {
 }
 
 async function animate() {
-    let count = 0;
-    while (count != 100) {
+    while (true) {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas for redrawing
         drawGrid(getProjectedGrid());
         await delay(16);
@@ -180,7 +179,7 @@ function createTerrain(matrix) {
 }
 
 function randomAltitude() {
-    return (Math.random() - 0.5) * 0;
+    return (Math.random() - 0.5) * maxAltitude;
 }
 function checkNeighbors(neighbor, visited, queue, currAltitude, matrix) {
     if (
