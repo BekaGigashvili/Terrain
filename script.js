@@ -179,7 +179,7 @@ function createTerrain(matrix) {
 }
 
 function randomAltitude() {
-    return (Math.random() - 0.5) * maxAltitude;
+    return (Math.random() - 0.5) * 30;
 }
 function checkNeighbors(neighbor, visited, queue, currAltitude, matrix) {
     if (
